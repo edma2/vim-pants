@@ -22,7 +22,7 @@ current file as a test suite (only if file ends with Test.scala or Spec.scala).
 
 Examples
 =========
-Start a new REPL (split window if vim-dispatch is used):
+Start a new REPL (especially useful as a split window if vim-dispatch is used):
 ```vim
 :Pants repl
 ```
