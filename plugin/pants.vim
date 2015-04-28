@@ -8,5 +8,3 @@ augroup junit
   autocmd!
   autocmd BufRead,BufNewFile *Test.scala,*Spec.scala command! -buffer Junit :Pants test.junit . --no-suppress-output --test=%:p
 augroup END
-
-command! Build call pants#Build()

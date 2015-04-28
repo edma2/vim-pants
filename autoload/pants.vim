@@ -46,7 +46,3 @@ function! pants#Pants(...)
     cd -
   endtry
 endfunction
-
-function! pants#Build()
-  execute "edit" findfile('BUILD', '.;')
-endfunction
