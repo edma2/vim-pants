@@ -4,7 +4,7 @@ A vim plugin for [Pants build tool](https://pantsbuild.github.io/).
 
 The core utility provided is the Pants command.
 Invoke it like so
-```
+```vim
 :Pants <optional arguments>
 ```
 The default goal is "compile".
@@ -16,3 +16,23 @@ and default target with the second argument. You can use '.' as an alias for
 the default target.
 
 Uses [vim-dispatch](https://github.com/tpope/vim-dispatch) if installed.
+
+Additionally, a convenience command ```:Junit``` is also provided to run the
+current file as a test suite (only if file ends with Test.scala or Spec.scala).
+
+Examples
+=========
+Start a new REPL (split window if vim-dispatch is used):
+```vim
+:Pants repl
+```
+
+Compile current default target, but with additional arguments:
+```vim
+:Pants compile . -arg1 -arg2
+```
+
+Run current file as JUnit test suite:
+```vim
+:Junit
+```
