@@ -13,7 +13,7 @@ The default target is inferred from the current file's parent BUILD file.
 When run with one argument, replace the default goal with the given argument.
 When run with two arguments, replace the default goal with the first argument,
 and default target with the second argument. The target syntax is described
-(here)[http://pantsbuild.github.io/target_addresses.html]; you can use '.' as
+[here](http://pantsbuild.github.io/target_addresses.html); you can use '.' as
 an alias for the default target (see the example below). When run with more
 than two arguments, set the goal and target as described above using the first
 two arguments, and pass the remaining arguments to pants.
