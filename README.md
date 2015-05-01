@@ -5,7 +5,7 @@ A vim plugin for [Pants build tool](https://pantsbuild.github.io/).
 The core utility provided is the Pants command.
 Invoke it like so
 ```vim
-:Pants <optional arguments>
+:Pants [goal] [target] ...
 ```
 The default goal is "compile".
 The default target is inferred from the current file's parent BUILD file.
