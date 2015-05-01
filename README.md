@@ -16,7 +16,7 @@ and default target with the second argument. The target syntax is described
 [here](http://pantsbuild.github.io/target_addresses.html); you can use '.' as
 an alias for the default target (see the example below). When run with more
 than two arguments, set the goal and target as described above using the first
-two arguments, and pass the remaining arguments to pants.
+two arguments, and pass the remaining arguments to Pants.
 
 Errors and warnings will be loaded in a quickfix list once Pants finishes
 running.
@@ -49,7 +49,7 @@ using the classpath of the default target:
 
 Compile a different target within the parent BUILD file ("foo") instead of
 using the default target (the target matching the parent directory's name).
-Also pass some additional arguments to pants.
+Also pass some additional arguments to Pants.
 ```vim
 :Pants compile .:foo -arg1 -arg2
 ```
