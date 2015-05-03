@@ -35,7 +35,9 @@ function! pants#Pants(...)
       \%-G%.%#"
 
   try
-    if exists("g:loaded_dispatch")
+    if has('nvim') && exists(":Neomake")
+      Neomake!
+    elseif exists("g:loaded_dispatch")
       Make
     else
       make
