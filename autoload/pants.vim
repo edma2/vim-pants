@@ -4,6 +4,7 @@ function! pants#Pants(...)
     echoerr "pants not found"
     return 1
   end
+
   let pants = fnamemodify(pants, ':p')
   if !executable(pants)
     echoerr pants . " not executable"
@@ -30,8 +31,8 @@ function! pants#Pants(...)
   let errorformat_old=&errorformat
   let &makeprg = "./pants --no-colors " . goal . " " . args . " " . target
   let &errorformat = "
-      \%E\ %#[error]\ %f:%l:\ %m,%C\ %#[error]\ %p^,%-C%.%#,%Z,
-      \%W\ %#[warn]\ %f:%l:\ %m,%C\ %#[warn]\ %p^,%-C%.%#,%Z,
+      \%E\ %#[error]\ %f:%l:%c:\ %m,%C\ %#[error]\ %p^,%-C%.%#,%Z,
+      \%W\ %#[warn]\ %f:%l:%c:\ %m,%C\ %#[warn]\ %p^,%-C%.%#,%Z,
       \%-G%.%#"
 
   try
